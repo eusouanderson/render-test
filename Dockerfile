@@ -4,15 +4,14 @@ FROM python:3.9-slim
 # Defina o diretório de trabalho
 WORKDIR /render-test
 
-# Copie o arquivo de código-fonte e o requirements.txt para o diretório de trabalho
+# Copie o arquivo de código-fonte para o diretório de trabalho
 COPY src /app
-COPY requirements.txt /app
 
-# Instale as dependências do requirements.txt
-RUN pip install -r requirements.txt
+# Instale as dependências
+RUN pip install flask
 
 # Exponha a porta 5000
 EXPOSE 5000
 
 # Defina o comando de execução da aplicação
-CMD ["python", "src/app.py"]
+CMD ["python", "app.py"]
