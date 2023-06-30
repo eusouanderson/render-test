@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Defina o diretório de trabalho
-WORKDIR /src
+WORKDIR /app
 
 # Copie o arquivo de código-fonte e o requirements.txt para o diretório de trabalho
 COPY . /app
