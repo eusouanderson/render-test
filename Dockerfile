@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Defina o diretório de trabalho
-WORKDIR /render-test
+WORKDIR /src
 
 # Copie o arquivo de código-fonte para o diretório de trabalho
 COPY src /app
