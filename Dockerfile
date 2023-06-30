@@ -4,6 +4,11 @@ FROM python:3.9-slim
 # Defina o diretório de trabalho
 WORKDIR /app
 
+# Copie o arquivo de requisitos para o diretório de trabalho
+COPY requirements.txt .
+
+# Instale as dependências do projeto
+RUN pip install --no-cache-dir -r requirements.txt
 # Copie o arquivo de código-fonte para o diretório de trabalho
 COPY . /app
 
