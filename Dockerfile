@@ -9,6 +9,7 @@ COPY requirements.txt .
 
 # Instale as dependências do projeto
 RUN pip install --no-cache-dir -r requirements.txt
+
 # Copie o arquivo de código-fonte para o diretório de trabalho
 COPY . /app
 
